@@ -19,12 +19,15 @@ Based on the analysis, take targeted actions to increase profitable customer res
 ### Instructions
 
 1. Import the necessary libraries.
-2. Load the `we_fn_use_c_marketing_customer_value_analysis.csv` into the variable `customer_df`.
+2. Load the `customer_value_analysis.csv` into the variable `customer_df`.
 3. First look at its main features (`head`, `shape`, `info`).
 4. Rename the columns so they follow the _PE8_ (snake case: lowecase_with_underscores).
 5. Change effective to date column to datetime format.
 6. Check `NaN` values per column.
-7. Define a function that takes a dataframe as an input and returns two dataframes: the first dataframe should have only the continuous columns while the second should contain only the discrete columns of the input dataframe. **Hint**: To determine which columns of the input dataframe are continuous and which ones are discrete, check out the number of unique values. 
-8. For the categorical data, check if there is some kind of text in a variable so we would need to clean it. **Hint**: Use the same method you used in step 7. Depending on the implementation, decide what to do with the variables you get.
-9. Get the categorical features.
-10. What should we do with the `customer_id` column?
+7. Define a functions that given an input dataframe, returns two dataframes: one with the numerical columns and another with categorical columns of the input dataframe.
+8. Drop any ID column.
+9. Get the correlation matrix for the numerical variables. What is pair of numerical variables that have the highest correlation? It makes sense, why?
+10. Define a function that takes a pandas DataFrame as an input and returns two pandas DataFrames: the first containing numerical continuous columns and the second containing numerical discrete columns of the input dataframe. To this end, it might be helpful to count the number of unique values. The function **must have an optional argument set by default to 36** to discriminate between continuous and discrete columns. Then, use it to create two new dataframes: continuous_df and discrete_df. 
+11. Create a function to create a barplot for all the columns of the discrete_df using seaborn, and set the figuresize = (16,16). 
+12. Create a function to create a histogram for all the columns of the continuous_df using seaborn, and set the figuresize = (16,16)
+13. According to the previous histogram plots, do you think that you do will have to apply any transformation?
