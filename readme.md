@@ -31,3 +31,4 @@ Based on the analysis, take targeted actions to increase profitable customer res
 11. Create a function to create a barplot for all the columns of the discrete_df using seaborn, and set the figuresize = (16,16). 
 12. Create a function to create a histogram for all the columns of the continuous_df using seaborn, and set the figuresize = (16,16)
 13. According to the previous histogram plots, do you think that you do will have to apply any transformation?
+14. Look for outliers in the continuous variables that you have found. Hint: There was a good plot to do that. Define a function to create this kind of plots for the continuous_df.
